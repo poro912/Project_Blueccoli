@@ -1,0 +1,34 @@
+// Description
+Sc		Scenes
+
+ScLoading	게임 시작 시 가장 먼저 로딩되는 씬으로 다음에 로드될 씬을 결정한다. 
+ScEvent		인트로, 다음 라운드로 진행 등 게임 중간에 나올 영상을 재생
+ScGame		본 게임이 구동
+
+
+// UpdateList
+// 날짜		내용
+
+23/01/16
+목표	: 이미지 로더 완성
+		이미지 비율 맞추기
+
+		Image Player
+		Image Loader
+			두 스크립트는 함께 쓰인다. 
+			로더는 해당 객체가 사용할 이미지를 미리 로딩하며, 요청이 있을 때 다음 이미지 세팅한다.
+			뷰어는 로더가 준비해놓은 이미지를 화면에 띄워주는 역할을 하며 실질적인 이미지 객체와 연결 및 시간 호가인을 담당한다.
+
+23/01/11
+씬 생성
+ScLoading	게임 시작 시 가장 먼저 로딩되는 씬으로 다음에 로드될 씬을 결정한다. 
+ScGame		본 게임이 구동
+ScEvent		인트로, 다음 라운드로 진행 등 게임 중간에 나올 영상을 재생
+
+타이머 적용해 인트로 만들기 준비 
+
+앞으로 해당 코드를 삽입하여 작성한다.
+	float timer;
+	timer += Time.deltaTime();
+	if (timer > 1.0f)
+		spriterenderer.sprite = sprite
